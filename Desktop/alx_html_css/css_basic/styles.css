@@ -1,6 +1,5 @@
 /* styles.css – Flexbox layout for the project */
 
-/* Make body a vertical flex container that fills the viewport */
 body {
   display: flex;
   flex-direction: column;
@@ -8,30 +7,31 @@ body {
   margin: 0;
 }
 
-/* Simple visible header/footer so layout is clear */
-header, footer {
-  background: #eee;
-  padding: 1rem;
-  text-align: center;
+article {
+  flex: 2;
+  overflow-y: auto;
+  min-width: 0;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 6px;
 }
 
 /* Main is a horizontal flex container for article + aside */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto;              /* keep automatic height/width and take remaining space */
-  gap: 1rem;               /* gap between article and aside */
+  flex: auto;             
+  gap: 1rem;              
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Article: takes 2/3 of the width, allows internal scrolling */
 article {
-  flex: 2;                 /* 2 parts */
+  flex: 2;
   overflow-y: auto;
-  min-width: 0;            /* allows child to shrink correctly inside flex */
-  padding: 1rem;
-  background: #ffffff;
+  min-width: 0;
+  padding: 20px;
+  background-color: #fafafa;
   border-radius: 6px;
 }
 
